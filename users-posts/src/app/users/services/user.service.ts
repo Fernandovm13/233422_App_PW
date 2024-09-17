@@ -8,15 +8,17 @@ import { IUsers } from '../../interface/i-users';
 })
 export class UserService {
 
-  private url_base = 'https://jsonplaceholder.typicode.com/users/'
+  private url_base = "https://jsonplaceholder.typicode.com/users/"
 
   constructor(private _http: HttpClient) { }
 
+
   getAll(): Observable<IUsers[]>{
-   return this._http.get<IUsers[]>(this.url_base);
+    return this._http.get<IUsers[]>(this.url_base);
   }
 
   get(): Observable<IUsers>{
-    return this._http.get<IUsers>(this.url_base + 1);
+    return this._http.get<IUsers>(this.url_base + "1");
   }
+
 }
